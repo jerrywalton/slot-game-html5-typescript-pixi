@@ -56,8 +56,7 @@ export default class Scoreboard {
             .fill({ color: 0x02474E, alpha: 0.8 });
 
         this.container.x = appWidth - rect.width - 7;
-        //this.container.y = appHeight / 2 + 70;
-        this.container.y = appHeight / 2 - (70 + rect.height);
+        this.container.y = appHeight / 2 + 70;
         this.container.addChild(rect, this.moneyText, betText, this.winAmountText);
     }
 }

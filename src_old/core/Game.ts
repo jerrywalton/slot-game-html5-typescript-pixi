@@ -20,11 +20,9 @@ export default class Game {
 
     public async init() {
         await this.app.init({ width: 960, height: 536 });
-        window.document.body.appendChild(this.app.canvas);
-
         this.loader = new Loader(this.app);
+        window.document.body.appendChild(this.app.canvas);
         await this.loader.loadAssets();
-
         this.createScene();
         this.createPlayButton();
         this.createReels();
@@ -42,10 +40,9 @@ export default class Game {
         this.app.stage.addChild(this.playBtn.sprite);
     }
 
-    private async createReels() {
+    private createReels() {
         this.reelsContainer = new ReelsContainer(this.app);
-        await this.reelsContainer.init();
-        //this.app.stage.addChild(this.reelsContainer.container);
+        this.app.stage.addChild(this.reelsContainer.container);
     }
 
     private createScoreboard() {
@@ -61,7 +58,6 @@ export default class Game {
     handleStart() {
         this.scoreboard.decrement();
         this.playBtn.setDisabled();
-        this.reelsContainer.clearWinningLines(); // Clear any existing
         this.reelsContainer.spin()
             .then(this.processSpinResult.bind(this));
     }

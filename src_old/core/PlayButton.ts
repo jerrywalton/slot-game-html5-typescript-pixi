@@ -7,14 +7,9 @@ export default class PlayButton {
     private readonly disabledTexture: Texture;
 
     constructor(app: Application, onClick: () => void) {
-        this.onClick = onClick
-        try {
-            this.activeTexture = Assets.get("atlas").textures["BTN_Spin.png"];
-            this.disabledTexture = Assets.get("atlas").textures["BTN_Spin_d.png"];
-        } catch (error) {
-            console.log(error);
-        } finally {
-        }
+        this.onClick = onClick;
+        this.activeTexture = Assets.get("atlas").textures["BTN_Spin.png"];
+        this.disabledTexture = Assets.get("atlas").textures["BTN_Spin_d.png"];
         this.sprite = new Sprite(this.activeTexture);
         this.init(app.screen.width, app.screen.height);
     }

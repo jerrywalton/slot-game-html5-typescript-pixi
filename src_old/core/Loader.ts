@@ -4,7 +4,7 @@ export default class Loader {
     private loadingScreen: Text;
     private app: Application;
 
-    public constructor(app: Application) {
+    constructor(app: Application) {
         this.app = app;
         this.loadingScreen = this.createLoadingScreen(app.screen.width, app.screen.height);
     }
@@ -19,14 +19,9 @@ export default class Loader {
 
     public async loadAssets() {
         this.showLoadingScreen();
-        try {
-            Assets.add({ alias: "atlas", src: "./assets/atlas.json" });
-            await Assets.load(["atlas"]);
-        } catch(error) {
-            console.log(error);
-        } finally {
-            this.hideLoadingScreen();
-        }
+        Assets.add({ alias: "atlas", src: "./assets/atlas.json" });
+        await Assets.load(["atlas"]);
+        this.hideLoadingScreen();
     }
 
     private createLoadingScreen(appWidth: number, appHeight: number): Text {

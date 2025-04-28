@@ -5,12 +5,7 @@ export default class Background {
     private readonly texture: Texture;
 
     constructor() {
-        try {
-            this.texture = Assets.get("atlas").textures["BG.png"];
-        } catch (error) {
-            console.log(error);
-        } finally {
-        }
+        this.texture = Assets.get("atlas").textures["BG.png"];
         this.sprite = new Sprite(this.texture);
     }
 }

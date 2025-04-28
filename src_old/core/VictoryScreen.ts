@@ -11,7 +11,7 @@ export default class VictoryScreen {
 
     show() {
         this.container.visible = true;
-        const id = window.setTimeout(this.hide.bind(this), 2000);
+        const id = window.setTimeout(this.hide.bind(this), 3000);
         const handler = () => {
             window.clearTimeout(id);
             this.hide();

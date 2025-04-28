@@ -1,17 +1,22 @@
 # Slot machine game - new and improved
 
-Updates to use support multiple winning lines.  
-Updates to support drawing a line across a winning line.
-Added custom interfaces.
-Added proper use of a constants file.
-Updated checkForWin to support:
-    - a WINNING line has one of the following:
-        THREE_OF_A_KIND: has 3 matching symbols and no SYMBOL_WILD
+--Updates to use support multiple winning lines.  
+--Updates to support drawing a line across a winning line.
+--Added custom interfaces.
+--Added proper use of a constants file.
+--Updated checkForWin to support:
+    a WINNING line has one of the following:
+    	THREE_OF_A_KIND: has 3 matching symbols and no SYMBOL_WILD
         THREE_WILDS: has 3 SYMBOL_WILDs
-        ONE_OR_TWO_WILDS: boolean = has 2 matching symbols and one SYMBOL_WILD -or- any symbol and 2 SYMBOL_WILDs 
+        ONE_OR_TWO_WILDS: boolean = has 2 matching symbols and one SYMBOL_WILD 
+		-or- any symbol and 2 SYMBOL_WILDs 
 
+author: Jerry Walton
+jerry.walton@symboliclanguages.com
+
+<<< ============================================================================================== >>>
 Follows is the original README.md:
-<<< =========================================================================================================== >>>
+<<< ============================================================================================== >>>
 
 # Slot machine game
 A simple slot machine game with three reels.
